@@ -1,5 +1,7 @@
 # Crypto Coin Scanner
 
+![Crypto Coin Scanner Screenshot](assets/screenshot.png)
+
 The Crypto Coin Scanner is a Streamlit web application that displays the top 10 cryptocurrencies with the highest positive percentage change in the last 24 hours. It fetches market data from the CoinGecko API, checks for tradability on Binance, and retrieves related news/web results using the Brave Search API.
 
 ## Features
