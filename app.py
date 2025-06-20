@@ -483,4 +483,4 @@ if 'coins_df' in st.session_state and st.session_state.coins_df is not None and 
         st.info("Configure a Brave Search API Key na barra lateral para buscar notícias.")
 
 st.sidebar.markdown("---")
-st.sidebar.markdown("Desenvolvido VVarelAI.")
+st.sidebar.markdown("Desenvolvido por VarelAI.")
