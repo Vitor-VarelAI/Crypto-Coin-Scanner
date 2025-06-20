@@ -22,7 +22,7 @@ The Crypto Coin Scanner is a Streamlit web application that displays the top 10 
 1.  **Clone the repository:**
     ```bash
     git clone https://github.com/Vitor-VarelAI/Crypto-Coin-Scanner.git
-    cd Coin-Scanner
+    cd Crypto-Coin-Scanner
     ```
 
 2.  **Create a virtual environment (recommended):**

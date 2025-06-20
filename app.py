@@ -13,16 +13,34 @@ import altair as alt
 load_dotenv() # Carrega variáveis do arquivo .env
 
 # --- Page Configuration ---
-st.set_page_config(
-    page_title="Crypto Coin Scanner",
-    page_icon="📊",
-    layout="wide"
-)
+st.set_page_config(page_title="Crypto Coin Scanner", page_icon="💰", layout="wide")
 
-# --- Main Application ---
-st.title("📊 Crypto Coin Scanner")
-st.markdown("Mostra as moedas com maior subida nas últimas 24h (Top 10).")
-st.warning("⚠️ Os dados são aproximados. Variações podem ocorrer entre fontes. Confirmar sempre antes de tomar decisões.")
+# Título e Instruções
+st.title('Crypto Coin Scanner 💰')
+
+with st.expander("ℹ️ - Como usar esta aplicação", expanded=True):
+    st.markdown("""
+        **Bem-vindo ao Crypto Coin Scanner!**
+
+        Siga estes passos para configurar e usar a aplicação. Os planos gratuitos das APIs são suficientes.
+
+        **Passo 1: Configurar as Chaves de API**
+
+        1.  **API da CoinGecko (Obrigatório):** Usada para buscar todos os dados financeiros das criptomoedas, como preço, capitalização de mercado e volume de negociação. É a fonte principal de dados da aplicação.
+            *   **Obtenha sua chave gratuita aqui:** [Página da API CoinGecko](https://www.coingecko.com/en/api).
+            *   Cole a chave na barra lateral, em **Configurações**.
+
+        2.  **API da Brave Search (Opcional):** Usada para buscar notícias e links recentes sobre as moedas listadas. Ajuda a entender o contexto e as razões por trás das variações de preço.
+            *   **Obtenha sua chave gratuita aqui:** [Página da Brave Search API](https://brave.com/search/api/).
+            *   Cole a chave na barra lateral para habilitar a busca de notícias.
+
+        **Passo 2: Analisar os Dados**
+        *   Após inserir a chave da CoinGecko, clique em **"Buscar Dados"** na barra lateral.
+        *   Use os filtros para refinar sua busca.
+        *   **O Gráfico de Barras:** Este gráfico mostra as 10 moedas com maior ganho percentual nas últimas 24 horas. Ele permite identificar rapidamente quais moedas estão em alta.
+    """)
+
+st.warning("⚠️ Os dados são fornecidos em tempo real, mas podem ter pequenas variações. Sempre confirme as informações antes de tomar decisões financeiras.")
 
 # --- API Key Input (within Expander) ---
 st.sidebar.header("Configurações")
